@@ -1,2 +1,47 @@
-# terraform-notes
-Basic notes on terraform
+# Terraform 
+- Infrastructure as code tool
+- Access among multiple providers such as AWS, GCP, Azure,etc
+
+## Terraform Providers 
+- plugin to talk to a specific set of APIs
+- providers that terraform supports eg . AWS
+- So we need to set up the configuration for the provider we need
+
+## Terraform Basic Commands
+`terraform init` 
+- going to look into all the configuration in the main.tf file
+- will download all the plugins for all the providers, eg. AWS, Azure, GCP
+- adds a .terraform/init folder with all the plugins
+
+`terraform plan`
+- does a dry run of the code
+- will show if it will delete any instances modify instances
+- quick sanity check to check for any changes
+
+`terraform apply`
+- runs another dry run
+- executes the commands to run application
+- will always refresh terraform.tfstate
+- running apply again doesn't deploy the resource again
+- terraform apply --auto-approve
+	- skips having to type on YES all the time
+
+`terraform destroy`
+- destroys the resources defined in terraform
+
+Other Notes
+- Order of the resources of code does not matter in terraform
+- No matter how many times we apply terraform, we give it the blueprint, 
+- We define what our entire infrastructure looks like, state will always match what is in terraform code
+- The state is always refreshed when you click on apply, it will figure out what needs to be added changed or destroyed
+
+File: `terraform.tfstate`
+- will always contains what is deployed in the provider, eg. aws
+- DO NOT mess with this file. it will destroy terraform and will create mismatches in your configuration
+
+
+
+
+
+
+
