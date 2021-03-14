@@ -40,7 +40,19 @@ File: `terraform.tfstate`
 - DO NOT mess with this file. it will destroy terraform and will create mismatches in your configuration
 
 
-
+`main.tf`
+- contains definition for resources 
+`output.tf` 
+- will print the values of the resources we want to deploy 
+`provider.tf`
+- providers for the APIs we're using eg. aws, gcp or azure
+`state_config.tf`
+- can configure it to check state via storage eg. s3 , this useful for teams where people are modifying and deploying new resources
+`terraform.tfvars` 
+- never pushed keep all your vars here, will be read in variables.tf
+`variables.tf `
+- where we define the variables we're going to use
+- this is where they're declared
 
 
 
