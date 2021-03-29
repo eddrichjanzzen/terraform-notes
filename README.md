@@ -60,5 +60,20 @@ File: `terraform.tfstate`
 - this is where they're declared
 
 
+## Terraform Troubleshooting and Debugging
+- Setting console logging to verbose
+- Useful for debugging deployment issues
+
+Set logging to verbose
+```bash
+$ export TF_LOG=true
+```
+
+Unset logging
+```bash
+$ export TF_LOG=
+```
+
+
 
 
