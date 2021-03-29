@@ -74,6 +74,25 @@ Unset logging
 $ export TF_LOG=
 ```
 
+## Common Errors
 
+### State is locked
+```bash
+Error locking state: Error acquiring the state lock: ConditionalCheckFailedException: The conditional request failed
+ID:        xxxxxxxx-1386-5164-fe11-bbb268404105
+Path:      449276385511-ap-southeast-1-terraform-state/aws-ecr-terraform.tfstate
+Operation: OperationTypeApply
+Who:       eddrichjanzzenang@eja.lan
+Version:   0.14.8
+Created:   2021-03-29 13:42:43.630445 +0000 UTC
+Info:
+
+```
+
+### Solution:
+```bash
+# terraform force-unlock <ID>
+$ terraform force-unlock xxxxxxxx-1386-5164-fe11-bbb268404105
+```
 
 
