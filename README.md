@@ -80,7 +80,7 @@ $ export TF_LOG=
 ```bash
 Error locking state: Error acquiring the state lock: ConditionalCheckFailedException: The conditional request failed
 ID:        xxxxxxxx-1386-5164-fe11-bbb268404105
-Path:      449276385511-ap-southeast-1-terraform-state/aws-ecr-terraform.tfstate
+Path:      xxxxxxxxx-ap-southeast-1-terraform-state/aws-ecr-terraform.tfstate
 Operation: OperationTypeApply
 Who:       eddrichjanzzenang@eja.lan
 Version:   0.14.8
